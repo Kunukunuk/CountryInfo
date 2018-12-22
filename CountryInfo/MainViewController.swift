@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var countryInfo: [CountryData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,7 +38,9 @@ class MainViewController: UIViewController {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: dataJson, options: []) as! NSArray
                 
                 for each in dataDictionary {
-                    print(each, " **** ")
+                    let eachCountry = each as! [String: Any]
+                    let country = CountryData(countryDict: eachCountry)
+                    self.countryInfo.append(country)
                 }
             } else {
                 print(error?.localizedDescription ?? "default error??")
