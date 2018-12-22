@@ -25,34 +25,18 @@ class MainViewController: UIViewController {
     
     func APIData() {
         
-        let urlString = "https://restcountries.eu/rest/v2/all"
-        
-        guard let url = URL(string: urlString) else {
-            print("no url")
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        APIManager().getAllCountry { (countryArray, error) in
+            
             if error == nil {
-                
-                guard let dataJson = data else {
-                    print("bad data")
-                    return
-                }
-                let dataDictionary = try! JSONSerialization.jsonObject(with: dataJson, options: []) as! NSArray
-                
-                for each in dataDictionary {
-                    let eachCountry = each as! [String: Any]
-                    let country = CountryData(countryDict: eachCountry)
-                    self.countryInfo.append(country)
-                }
+                self.countryInfo = countryArray!
+                print(self.countryInfo.count)
+                self.tableView.reloadData()
             } else {
-                print(error?.localizedDescription ?? "default error??")
+                print(error?.localizedDescription ?? "Default error?")
             }
         }
-        task.resume()
-    }
 
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,9 +47,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! CountryCell
         
+        cell.country = countryInfo[indexPath.row]
+        
         return cell
     }
-    
     
 }
 
