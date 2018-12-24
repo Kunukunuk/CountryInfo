@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVGKit
 
 class CountryCell: UITableViewCell {
 
@@ -15,16 +16,17 @@ class CountryCell: UITableViewCell {
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var subregionLabel: UILabel!
     
-    var country: CountryData? {
+    var country: CountryData! {
         didSet {
-            let url = URL(string: (country?.flagURLString)!)
-            if let data = try? Data(contentsOf: url!)
-            {
-                self.flagImageView.image = UIImage(data: data)
+            if country.flagURL != nil {
+                
+                let SVGImg: SVGKImage = SVGKImage(contentsOf: country.flagURL)
+                flagImageView.image = SVGImg.uiImage
+                
             }
-            countryNameLabel.text = country?.name
-            regionLabel.text = country?.region
-            subregionLabel.text = country?.subregion
+            countryNameLabel.text = country.name
+            regionLabel.text = country.region
+            subregionLabel.text = country.subregion
         }
     }
     override func awakeFromNib() {

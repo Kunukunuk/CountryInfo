@@ -18,7 +18,7 @@ class CountryData {
     var captial: String?
     var cioc: String?
     var demonym: String?
-    var flagURLString: String?
+    var flagURL: URL?
     var gini: String?
     var languages: NSArray?
     var coordinates: NSArray?
@@ -37,7 +37,8 @@ class CountryData {
         captial = countryDict["capital"] as? String ?? "No capital"
         cioc = countryDict["cioc"] as? String ?? "No cioc"
         demonym = countryDict["demonym"] as? String ?? "No demonym"
-        flagURLString = countryDict["flag"] as? String ?? "No flag"
+        let urlString = countryDict["flag"] as? String ?? "No flag"
+        flagURL = URL(string: urlString)
         gini = countryDict["gini"] as? String ?? "No gini"
         languages = countryDict["languages"] as? NSArray ?? []
         coordinates = countryDict["latlng"] as? NSArray ?? []
