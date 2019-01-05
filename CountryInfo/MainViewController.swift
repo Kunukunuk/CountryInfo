@@ -37,6 +37,14 @@ class MainViewController: UIViewController {
         }
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "details" {
+            let destinationVC = segue.destination as! CountryViewController
+            let index = tableView.indexPathForSelectedRow!
+            destinationVC.country = countryInfo[index.row]
+        }
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {

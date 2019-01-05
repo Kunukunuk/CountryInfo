@@ -75,7 +75,7 @@
                                             <outlet property="flagImageView" destination="cwB-8c-kQN" id="Ns7-CJ-CpY"/>
                                             <outlet property="regionLabel" destination="E5a-CP-XyY" id="9FZ-tM-fdm"/>
                                             <outlet property="subregionLabel" destination="yTj-hU-6AE" id="bGB-Yh-2t2"/>
-                                            <segue destination="eeg-79-7kn" kind="show" id="TUj-Tg-W5e"/>
+                                            <segue destination="eeg-79-7kn" kind="show" identifier="details" id="TUj-Tg-W5e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="73.313343328335833"/>
         </scene>
-        <!--View Controller-->
+        <!--Country View Controller-->
         <scene sceneID="AIq-t3-6RK">
             <objects>
-                <viewController id="eeg-79-7kn" sceneMemberID="viewController">
+                <viewController id="eeg-79-7kn" customClass="CountryViewController" customModule="CountryInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhu-DW-JY0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

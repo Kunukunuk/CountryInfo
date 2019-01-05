@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5213CA21E04910001ED902 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5213C921E04910001ED902 /* CountryViewController.swift */; };
 		0DDDF16E21CDD3120089B593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDF16D21CDD3120089B593 /* AppDelegate.swift */; };
 		0DDDF17021CDD3120089B593 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDF16F21CDD3120089B593 /* MainViewController.swift */; };
 		0DDDF17321CDD3120089B593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDDF17121CDD3120089B593 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5213C921E04910001ED902 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		0DDDF16A21CDD3120089B593 /* CountryInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDDF16D21CDD3120089B593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DDDF16F21CDD3120089B593 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +54,6 @@
 				986ED736E82A28723C18D2C0 /* Pods-CountryInfo.debug.xcconfig */,
 				92E8A75D2C4FB47C64D4FC36 /* Pods-CountryInfo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,6 +83,7 @@
 				0DDDF18121CDE7150089B593 /* CountryCell.swift */,
 				0DDDF17F21CDDB880089B593 /* CountryData.swift */,
 				0DDDF18321CDED990089B593 /* APIManager.swift */,
+				0D5213C921E04910001ED902 /* CountryViewController.swift */,
 				0DDDF17121CDD3120089B593 /* Main.storyboard */,
 				0DDDF17421CDD3130089B593 /* Assets.xcassets */,
 				0DDDF17621CDD3130089B593 /* LaunchScreen.storyboard */,
@@ -223,6 +225,7 @@
 				0DDDF18221CDE7150089B593 /* CountryCell.swift in Sources */,
 				0DDDF17021CDD3120089B593 /* MainViewController.swift in Sources */,
 				0DDDF18421CDED990089B593 /* APIManager.swift in Sources */,
+				0D5213CA21E04910001ED902 /* CountryViewController.swift in Sources */,
 				0DDDF18021CDDB880089B593 /* CountryData.swift in Sources */,
 				0DDDF16E21CDD3120089B593 /* AppDelegate.swift in Sources */,
 			);
