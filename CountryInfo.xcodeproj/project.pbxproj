@@ -57,6 +57,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0D34230D21EC16DE003DA34E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDF16F21CDD3120089B593 /* MainViewController.swift */,
+				0D5213C921E04910001ED902 /* CountryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0D34230E21EC171C003DA34E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDF18121CDE7150089B593 /* CountryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D34230F21EC1722003DA34E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDF17F21CDDB880089B593 /* CountryData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		0DDDF16121CDD3120089B593 = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				0DDDF16D21CDD3120089B593 /* AppDelegate.swift */,
-				0DDDF16F21CDD3120089B593 /* MainViewController.swift */,
-				0DDDF18121CDE7150089B593 /* CountryCell.swift */,
-				0DDDF17F21CDDB880089B593 /* CountryData.swift */,
 				0DDDF18321CDED990089B593 /* APIManager.swift */,
-				0D5213C921E04910001ED902 /* CountryViewController.swift */,
+				0D34230E21EC171C003DA34E /* View */,
+				0D34230F21EC1722003DA34E /* Data */,
+				0D34230D21EC16DE003DA34E /* ViewControllers */,
 				0DDDF17121CDD3120089B593 /* Main.storyboard */,
 				0DDDF17421CDD3130089B593 /* Assets.xcassets */,
 				0DDDF17621CDD3130089B593 /* LaunchScreen.storyboard */,
